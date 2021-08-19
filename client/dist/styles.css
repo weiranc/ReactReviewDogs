@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+.list-entry {
+  border-style: solid;
+  border-width: 2px;
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
+}
+
