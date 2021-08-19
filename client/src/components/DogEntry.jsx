@@ -33,27 +33,30 @@ class DogEntry extends React.Component {
     if (!this.state.showMore) {
       return (
         <div className="list-entry">
-          <h3>{this.props.dog.name} </h3>
-          <div>{this.props.dog.origin}</div>
+          <div className="info">
+            <h3>{this.props.dog.name} </h3>
+            <button onClick={() => this.props.handleAddtoFavorites(this.props.dog)}>Add to Favorites</button>
+            <button onClick={this.handleMoreInfoClick}>More info</button>
+          </div>
           <div className="photo">
             <img src={this.props.dog.image.url} />
           </div>
-          <button onClick={() => this.props.handleAddtoFavorites(this.props.dog)}>Add to Favorites</button>
-          <button onClick={this.handleMoreInfoClick}>More info</button>
         </div>
       )
     } else {
       return (
         <div className="list-entry">
-          <h3>{this.props.dog.name} </h3>
-          <div>{this.props.dog.origin}</div>
-          <div>{this.props.dog.bred_for}</div>
-          <div>{this.props.dog.temperament}</div>
+          <div className="info">
+            <h3>{this.props.dog.name} </h3>
+            <div>Origin: {this.props.dog.origin}</div>
+            <div>Bred For: {this.props.dog.bred_for}</div>
+            <div>Temperament: {this.props.dog.temperament}</div>
+            <button onClick={() => this.props.handleAddtoFavorites(this.props.dog)}>Add to Favorites</button>
+            <button onClick={this.handleMoreInfoClick}>Less info</button>
+          </div>
           <div className="photo">
             <img src={this.props.dog.image.url} />
           </div>
-          <button onClick={() => this.props.handleAddtoFavorites(this.props.dog)}>Add to Favorites</button>
-          <button onClick={this.handleMoreInfoClick}>Less info</button>
         </div>
       )
     }

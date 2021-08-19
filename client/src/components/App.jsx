@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        <h1>DOG LIST</h1>
+        <h1 className="title">Dogs of the World</h1>
         <Favorites favs={this.state.favorites} handleRemovefromFavorites={this.handleRemovefromFavorites}/>
         <DogList dogs={this.state.dogs} handleAddtoFavorites={this.handleAddtoFavorites}/>
       </div>
