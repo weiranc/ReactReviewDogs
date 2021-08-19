@@ -8,6 +8,7 @@ const DogList = (props) => {
         <DogEntry
           dog={dog}
           key={i}
+          handleAddtoFavorites={props.handleAddtoFavorites}
         />
       ))}
     </div>

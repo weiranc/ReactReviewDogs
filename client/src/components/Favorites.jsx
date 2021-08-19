@@ -9,11 +9,12 @@ const Favorites = (props) => {
     <div>
       <h3>Favorites List</h3>
       {props.favs.map((dog, i) => (
-        <div>
+        <div key={dog.id}>
           <h3>{dog.name}</h3>
           <div>
             <img src={dog.image.url} />
           </div>
+          <button onClick={() => props.handleRemovefromFavorites(dog)}>Remove from Favorites</button>
         </div>
       ))}
     </div>
