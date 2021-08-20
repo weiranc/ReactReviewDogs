@@ -1,26 +1,27 @@
 import React from 'react';
 
-const Favorites = (props) => {
-  if (props.favs.length === 0) {
-    return (<div className="title">No dogs added to favorites</div>)
-  }
+{/* <div class="fav-cont">
+  <h3 class="title">Favorites List</h3>
+  <div class="fav-list">
 
-  return (
-    <div className="fav-cont">
-      <h3 className="title">Favorites List</h3>
-      <div className="fav-list">
-        {props.favs.map((dog, i) => (
-          <div key={dog.id} className="fav-entry">
-            <h3>{dog.name}</h3>
-            <div className="fav-photo">
-              <img src={dog.image.url} />
-            </div>
-            <button onClick={() => props.handleRemovefromFavorites(dog)}>Remove from Favorites</button>
-          </div>
-        ))}
+    <div class="fav-entry">
+      <h3>Favorite Dog 1 Photo</h3>
+      <div class="fav-photo">
+        <img src=Favorite Dog 1 Photo Url/>
       </div>
+      <button>Remove from Favorites</button>
     </div>
-  )
-};
 
-export default Favorites;
+    <div class="fav-entry">
+      <h3>Favorite Dog 2 Photo</h3>
+      <div class="fav-photo">
+        <img src=Favorite Dog 2 Photo Url/>
+      </div>
+      <button>Remove from Favorites</button>
+    </div>
+
+    ....etc.....
+
+  </div>
+</div> */}
+

@@ -1,66 +1,27 @@
-import React from 'react';
+// LESS INFO
+{/* <div class="list-entry">
+  <div class="info">
+    <h3>Dog Entry Name</h3>
+    <button>Add to Favorites</button>
+    <button>More info</button>
+  </div>
+  <div class="photo">
+    <img src=Dog Entry Photo Url/>
+  </div>
+</div> */}
 
-// const DogEntry = (props) => {
-//   return (
-//     <div className="list-entry">
-//       <h3>{props.dog.name} </h3>
-//       <div>{props.dog.origin}</div>
-//       <div className="photo">
-//         <img src={props.dog.image.url} />
-//       </div>
-//       <button onClick={() => props.handleAddtoFavorites(props.dog)}>Add to Favorites</button>
-//       <button>More info</button>
-//     </div>
-//   )
-// };
+// MORE INFO
+{/* <div class="list-entry">
+  <div class="info">
+    <h3>Dog Entry Name</h3>
+    <div>Origin: Dog Entry Origin</div>
+    <div>Bred For: Dog Entry Bred For</div>
+    <div>Temperament: Dog Entry Temperament</div>
+    <button>Add to Favorites</button>
+    <button>Less info</button>
+  </div>
+  <div class="photo">
+    <img src=Dog Entry Photo Url />
+  </div>
+</div> */}
 
-class DogEntry extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showMore: false
-    };
-    this.handleMoreInfoClick = this.handleMoreInfoClick.bind(this);
-  }
-
-  handleMoreInfoClick() {
-    this.setState({
-      showMore: !this.state.showMore
-    })
-  }
-
-  render() {
-    if (!this.state.showMore) {
-      return (
-        <div className="list-entry">
-          <div className="info">
-            <h3>{this.props.dog.name} </h3>
-            <button onClick={() => this.props.handleAddtoFavorites(this.props.dog)}>Add to Favorites</button>
-            <button onClick={this.handleMoreInfoClick}>More info</button>
-          </div>
-          <div className="photo">
-            <img src={this.props.dog.image.url} />
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div className="list-entry">
-          <div className="info">
-            <h3>{this.props.dog.name} </h3>
-            <div>Origin: {this.props.dog.origin}</div>
-            <div>Bred For: {this.props.dog.bred_for}</div>
-            <div>Temperament: {this.props.dog.temperament}</div>
-            <button onClick={() => this.props.handleAddtoFavorites(this.props.dog)}>Add to Favorites</button>
-            <button onClick={this.handleMoreInfoClick}>Less info</button>
-          </div>
-          <div className="photo">
-            <img src={this.props.dog.image.url} />
-          </div>
-        </div>
-      )
-    }
-  }
-}
-
-export default DogEntry;
